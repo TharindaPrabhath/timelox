@@ -4,22 +4,22 @@ import { Home, MessageSquare, Mail, UserRound } from "lucide-react";
 const Tabs = [
   {
     name: "Home",
-    path: "/",
+    path: "/home",
     icon: Home,
   },
   {
     name: "Inbox",
-    path: "/inbox",
+    path: "/home/inbox",
     icon: MessageSquare,
   },
   {
     name: "Messages",
-    path: "/messages",
+    path: "/home/messages",
     icon: Mail,
   },
   {
     name: "Profile",
-    path: "/profile",
+    path: "/home/profile",
     icon: UserRound,
   },
 ];
