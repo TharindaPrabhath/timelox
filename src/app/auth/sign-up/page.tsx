@@ -3,6 +3,7 @@ import Image from "next/image";
 import VideoThumbnail from "../../../../public/signup-video-thumbnail.png";
 import Wow from "../../../../public/wow.png";
 import Rectangle from "../../../../public/rectangle14.png";
+import Link from "next/link";
 
 function SignUp() {
   return (
@@ -40,9 +41,12 @@ function SignUp() {
         height={400}
       />
 
-      <button className="z-50 mt-16 text-purple-700 text-3xl font-bold whitespace-nowrap border shadow-sm bg-white w-72 mx-auto justify-center items-center px-16 py-3.5 rounded-[100px] border-solid border-black">
+      <Link
+        href="/auth/create-account"
+        className="z-50 mt-16 text-purple-700 text-3xl font-bold whitespace-nowrap border shadow-sm bg-white w-72 mx-auto justify-center items-center px-16 py-3.5 rounded-[100px] border-solid border-black"
+      >
         Sign up
-      </button>
+      </Link>
     </div>
   );
 }

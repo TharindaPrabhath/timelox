@@ -37,7 +37,7 @@ function SendTimelox() {
           className="-z-10"
         />
         <div className="absolute top-10 left-10 flex flex-row items-center justify-center gap-16">
-          <Link href="/">
+          <Link href="/create-video">
             <Image
               src={AddPhoto}
               alt="Add photo"
@@ -47,7 +47,7 @@ function SendTimelox() {
               // className="z-0"
             />
           </Link>
-          <Link href="/">
+          <Link href="/select-package">
             <Image
               src={AddVideo}
               alt="Add video"
