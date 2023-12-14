@@ -2,6 +2,7 @@ import Facebook from "../../../../public/facebook.png";
 import X from "../../../../public/x.png";
 import Rectangle from "../../../../public/rectangle282.png";
 import Image from "next/image";
+import Link from "next/link";
 
 function Login() {
   return (
@@ -43,12 +44,13 @@ function Login() {
             </a>
           </div>
         </div>
-        <button
+        <Link
+          href="/home"
           type="submit"
           className="text-white text-3xl font-medium whitespace-nowrap border shadow-sm bg-pink-400 self-stretch justify-center items-stretch mt-8 px-12 py-2 rounded-[100px] border-solid border-pink-600"
         >
           Login
-        </button>
+        </Link>
         <div className="self-stretch flex items-stretch justify-between gap-5 mt-7 pr-1.5">
           <img
             loading="lazy"

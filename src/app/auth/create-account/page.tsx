@@ -1,5 +1,8 @@
+import Image from "next/image";
 import Facebook from "../../../../public/facebook.png";
 import X from "../../../../public/x.png";
+import Text from "../../../../public/signup-text.png";
+import Link from "next/link";
 
 function RegistrationForm() {
   return (
@@ -9,6 +12,13 @@ function RegistrationForm() {
           loading="lazy"
           srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/df1b56fe0411e0ec4924dc21a47ce0ce3b111c4cdf079427e25d3286d48753ba?apiKey=a9e210de0ede48479f065d558e6a4bec&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/df1b56fe0411e0ec4924dc21a47ce0ce3b111c4cdf079427e25d3286d48753ba?apiKey=a9e210de0ede48479f065d558e6a4bec&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/df1b56fe0411e0ec4924dc21a47ce0ce3b111c4cdf079427e25d3286d48753ba?apiKey=a9e210de0ede48479f065d558e6a4bec&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/df1b56fe0411e0ec4924dc21a47ce0ce3b111c4cdf079427e25d3286d48753ba?apiKey=a9e210de0ede48479f065d558e6a4bec&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/df1b56fe0411e0ec4924dc21a47ce0ce3b111c4cdf079427e25d3286d48753ba?apiKey=a9e210de0ede48479f065d558e6a4bec&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/df1b56fe0411e0ec4924dc21a47ce0ce3b111c4cdf079427e25d3286d48753ba?apiKey=a9e210de0ede48479f065d558e6a4bec&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/df1b56fe0411e0ec4924dc21a47ce0ce3b111c4cdf079427e25d3286d48753ba?apiKey=a9e210de0ede48479f065d558e6a4bec&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/df1b56fe0411e0ec4924dc21a47ce0ce3b111c4cdf079427e25d3286d48753ba?apiKey=a9e210de0ede48479f065d558e6a4bec&"
           className="aspect-[3.79] object-contain object-center w-[254px] overflow-hidden self-center max-w-full"
+        />
+        <Image
+          src={Text}
+          alt="Sign up text"
+          width={200}
+          height={100}
+          className="w-fit mx-auto"
         />
         <div className="border bg-white self-stretch flex items-center justify-between gap-5 mt-48 px-5 py-3 rounded-[100px] border-solid border-black border-opacity-0">
           <input placeholder="Full Name" />
@@ -65,12 +75,13 @@ function RegistrationForm() {
             </a>
           </div>
         </div>
-        <button
+        <Link
+          href="/home"
           type="submit"
           className="text-white text-3xl font-medium whitespace-nowrap border shadow-sm bg-pink-400 self-stretch justify-center items-stretch mt-8 px-12 py-2 rounded-[100px] border-solid border-pink-600"
         >
           Create Account
-        </button>
+        </Link>
         <div className="self-stretch flex items-stretch justify-between gap-5 mt-7 pr-1.5">
           <img
             loading="lazy"
@@ -96,7 +107,12 @@ function RegistrationForm() {
             Already have an account?
           </div>
           <div className="text-black text-xs-black self-stretch whitespace-nowrap">
-            <a href="/" aria-label="Login" role="link" className="font-bold">
+            <a
+              href="/auth/login"
+              aria-label="Login"
+              role="link"
+              className="font-bold"
+            >
               Login
             </a>
           </div>
